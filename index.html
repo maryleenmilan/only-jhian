@@ -5,12 +5,20 @@
 <title>For My Forever</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
 
 </head>
 
 <body>
+
+<div class="intro-screen">
+  <h1 class="intro-text">I love you so much, my Jhian</h1>
+</div>
+
+<div id="mainContent" class="hidden">
+
 
 <span class="heart" style="left:10%">❤️</span>
 <span class="heart" style="left:30%">💖</span>
@@ -33,10 +41,10 @@
 <section id="home">
   
   <div class="slider">
-    <div class="slide active"><img src="Pictures/Jhi.jpg"></div>
-    <div class="slide"><img src="Pictures/kiss.jpg"></div>
+    <div class="slide active"><img src="Pictures/baby.jpg"></div>
+    <div class="slide"><img src="Pictures/Jhi.jpg"></div>
     <div class="slide"><img src="Pictures/cute.jpg"></div>
-    <div class="slide"><img src="Pictures/baby.jpg"></div>
+    <div class="slide"><img src="Pictures/kiss.jpg"></div>
     <div class="slide"><img src="Pictures/love.jpg"></div>
     <div class="slide"><img src="Pictures/lovey.jpg"></div>
     <div class="slide"><img src="Pictures/lean.jpg"></div>
@@ -48,23 +56,28 @@
   <div class="letter">
     <p>
       Hi my love,<br><br>
-      Happy Valentine’s Day, Thank you for being my favorite person, my bestfriend, and my safe place!<br><br>
-      I love you to infinity and beyond!<br><br>
-      — Love, Milan ❤️
+      Happy Valentine’s Day, Thank you for being my favorite person, my best friend, and my safe place. With you,
+      I feel understood, protected, and truly loved. I may not always say it perfectly, but please know that
+       I appreciate you more than you think. Thank you for your time, your effort, your love, and your loyalty.<br><br>
+       You make my world softer and my days brighter. I am so blessed to have you in my life. I love you to infinity and beyond, 
+       and I will keep choosing you every single day.<br><br>
+      — Love, Milan 
     </p>
   </div>
 </section>
 
 <section id="music" class="music">
-  <h2>This song reminds me of you 🎶</h2>
-  <iframe src="https://open.spotify.com/embed/track/0qvzXomUDJVaUboy2wMfiS"
-  width="100%" height="152"
-  allow="autoplay; clipboard-write; encrypted-media"></iframe>
+  <h2>This song reminds me of you</h2>
+  <iframe data-testid="embed-iframe" style="border-radius:12px" 
+  src="https://open.spotify.com/embed/track/0GD9U8EM8xcPvuaA50Wzpe?utm_source=generator" 
+  width="100%" height="200" frameBorder="0" 
+  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+  loading="lazy"></iframe>
 </section>
 
 <section id="from">
   <h2>Made Just For You 💕</h2>
-  <p>Built with love, smiles, and late-night coding 💗</p>
+  <p>Built with love and sweet intentions</p>
 </section>
 
 <div class="love-btn-wrap">
@@ -89,12 +102,7 @@ document.querySelectorAll(".heart").forEach(h=>{
   h.style.animationDelay=Math.random()*5+"s";
 });
 
-let loveRunning = false;
-
 document.getElementById("loveBtn").addEventListener("click",()=>{
-
-  if(loveRunning) return;
-  loveRunning = true;
 
   const loveInterval = setInterval(()=>{
     for(let i=0;i<10;i++){
@@ -113,12 +121,32 @@ document.getElementById("loveBtn").addEventListener("click",()=>{
 
   setTimeout(()=>{
     clearInterval(loveInterval);
-    loveRunning = false;
   },3000);
 
 });
-</script>
+window.addEventListener("load", () => {
+  const intro = document.getElementById("intro");
 
+  setTimeout(() => {
+    intro.classList.add("intro-hide");
+
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 1000);
+
+  }, 2000);
+});
+window.addEventListener("load", ()=>{
+
+  setTimeout(()=>{
+    document.querySelector(".intro-screen").style.display="none";
+    document.getElementById("mainContent").classList.remove("hidden");
+  },3000); 
+
+});
+
+
+</script>
+</div>
 </body>
 </html>
-
