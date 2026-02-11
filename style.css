@@ -291,3 +291,14 @@ section:nth-of-type(4){animation-delay:1.1s}
   }
 }
 
+@media(max-width:600px){
+  .slider {
+    max-width:280px; 
+  }
+
+  .slider img {
+    max-height:250px; 
+  }
+}
+
+
