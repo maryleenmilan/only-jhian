@@ -84,7 +84,7 @@ section{
 }
 
 .slider{
-  width:80%;
+  width:85%;
   max-width:none;
   aspect-ratio: 3 / 4;  
   margin:auto;
@@ -290,4 +290,5 @@ section:nth-of-type(4){animation-delay:1.1s}
     transform:scale(1.03);
   }
 }
+
 
