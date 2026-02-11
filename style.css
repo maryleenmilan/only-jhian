@@ -84,10 +84,10 @@ section{
 }
 
 .slider{
-  width:60%;
-  max-width:420px;
-  aspect-ratio: 3 / 4;  
-  margin:auto;
+  width:90%;
+  max-width:350px;  
+  aspect-ratio: 3 / 4;
+  margin:40px auto;
   border-radius:20px;
   overflow:hidden;
   box-shadow:0 15px 35px rgba(0,0,0,.2);
@@ -290,3 +290,4 @@ section:nth-of-type(4){animation-delay:1.1s}
     transform:scale(1.03);
   }
 }
+
