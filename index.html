@@ -40,7 +40,6 @@
     <div class="slide"><img src="Pictures/love.jpg"></div>
     <div class="slide"><img src="Pictures/lovey.jpg"></div>
     <div class="slide"><img src="Pictures/lean.jpg"></div>
-    <div class="slide"><img src="Pictures/l.jpg"></div>
   </div>
 </section>
 
@@ -90,21 +89,13 @@ document.querySelectorAll(".heart").forEach(h=>{
   h.style.animationDelay=Math.random()*5+"s";
 });
 
-let loveInterval=null;
-
 document.getElementById("loveBtn").addEventListener("click",()=>{
-  if(loveInterval){
-    clearInterval(loveInterval);
-    loveInterval=null;
-    return;
-  }
 
-  loveInterval=setInterval(()=>{
+  const loveInterval = setInterval(()=>{
     for(let i=0;i<10;i++){
       const love=document.createElement("div");
       love.className="love-text";
-      love.innerHTML=["I LOVE YOU","I LOVE YOU","I LOVE YOU","I LOVE YOU"]
-        [Math.floor(Math.random()*4)];
+      love.innerHTML="I LOVE YOU";
 
       love.style.left=Math.random()*100+"vw";
       love.style.top=(60+Math.random()*40)+"vh";
@@ -114,17 +105,14 @@ document.getElementById("loveBtn").addEventListener("click",()=>{
       setTimeout(()=>love.remove(),3000);
     }
   },400);
+
+  setTimeout(()=>{
+    clearInterval(loveInterval);
+  },3000);
+
 });
+
 </script>
-
-
 
 </body>
 </html>
-
-
-
-
-
-
-
